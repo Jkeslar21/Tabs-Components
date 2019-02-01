@@ -21,13 +21,13 @@ class TabLink {
      const links = document.querySelectorAll('.tabs-link');
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    links.forEach( item => item.classList = 'tabs-link')
+    links.forEach( item => item.classList.remove('tabs-link-selected'));
 
     // Add a class named "tabs-link-selected" to this link
-     this.element.classList.toggle('tabs-link-selected')
+    this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-  this.tabItem.select();
+    this.tabItem.select();
   }
 }
 
@@ -42,9 +42,9 @@ class TabItem {
      const items = document.querySelectorAll('.tabs-item')
 
     // Remove the class "tabs-item-selected" from each element
-    items.forEach( item => item.classList = 'tabs-item');
+    items.forEach( item => item.classList.remove('tabs-item-selected'));
     // Add a class named "tabs-item-selected" to this element
-    this.element.classList.toggle('tabs-item-selected');
+    this.element.classList.add('tabs-item-selected');
   }
 }
 
